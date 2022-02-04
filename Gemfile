@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'capybara'
+
 ruby '3.0.2'
 
 group :test do

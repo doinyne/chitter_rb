@@ -7,7 +7,12 @@ class Chitter < Sinatra::Base
   end
 
   get '/' do
-    'Hello World'
+    'Chitter'
+  end
+
+  get '/peeps' do
+    peeps = ["Arsenal are good", "Charlton are better", "Huddersfield are worse"]
+    peeps.join
   end
 
   run! if app_file == $0

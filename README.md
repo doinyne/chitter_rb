@@ -119,3 +119,13 @@ SimpleCov.start
 ```
 
 You can see your test coverage when you run your tests. If you want this in a graphical form, uncomment the `HTMLFormatter` line and see what happens!
+
+
+
+To connect to the correct database and to create a table locally follow these steps:
+```
+1. Connect to psql
+2. Create the database using the psql command CREATE DATABASE chitter_rb;
+3. Connect to the database using the pqsl command \c chitter_rb
+4. Run the query we have saved in the file 01_create_peeps_table.sql
+```

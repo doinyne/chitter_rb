@@ -1,9 +1,9 @@
+require 'pg'
+
 class Peep
   def self.all
-    [
-      "Arsenal are good",
-      "Charlton are better",
-      "Huddersfield are worse"
-    ]
-  end 
+    connection = PG.connect(dbname: 'chitter_rb')
+    result = connection.exec("SELECT * FROM peeps;")
+    result.map { |peeps| peeps['peep'] }
+  end
 end 
